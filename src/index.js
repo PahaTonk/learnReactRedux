@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Reference from './components/reference';
+import { Lesson } from './components/HOC/index';
 
 
-ReactDOM.render(<Reference />, document.getElementById('root'));
+ReactDOM.render(<Lesson />, document.getElementById('root'));
