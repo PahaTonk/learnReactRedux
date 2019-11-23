@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 export default class MyPortal extends Component {
@@ -13,7 +13,14 @@ export default class MyPortal extends Component {
     };
 
     render () {
-        return ReactDOM.createPortal(this.props.children, this.el);
+        const childrenComponent = (
+            <Fragment>
+                <div>TEST PORTAL</div>
+                <button>Click</button>
+            </Fragment>
+        );
+        // return ReactDOM.createPortal(this.props.children, this.el);
+        return ReactDOM.createPortal(childrenComponent, this.el);
     };
 };
 

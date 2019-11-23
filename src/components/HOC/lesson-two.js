@@ -10,7 +10,7 @@ const AppLinkHOC = (Link) => {
         render () {
             const props = this.props;
 
-            return <Link { ...props } onClick={ this.onClick } className="active" />
+            return <Link { ...props } onClick={ this.onClick } />
         }
     }
 }

@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { AppLinkHOC } from './../HOC/index';
 
-const App = AppLinkHOC(Link);
+const App = AppLinkHOC(NavLink);
 
 export default class Menu extends Component {
 
     render () {
         return (
-            <Router>
+            <header>
                 <nav>
-                    <App to="/" >Home</App>
-                    <App to="/portfolio" >Portfolio</App>
-                    <App to="/contacts" >Contacts</App>
-                    <App to="/about-as" >About-as</App>
+                    <App exact to="/" >News</App>
+                    <App exact to="/reference" >Reference</App>
+                    <App to="/lesson" >Lesson</App>
+                    <App to="/lesson/news" >Lesson</App>
                 </nav>
-            </Router>
+            </header>
         );
     };
 };
