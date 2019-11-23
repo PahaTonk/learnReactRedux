@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Lesson } from './components/HOC/index';
+import Menu from './components/menu';
 
-
-ReactDOM.render(<Lesson />, document.getElementById('root'));
+ReactDOM.render(<Menu />, document.querySelector('#root'));

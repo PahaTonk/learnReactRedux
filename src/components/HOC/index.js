@@ -1,5 +1,7 @@
-import Lesson from './lesson';
+import LessonOne from './lesson-one';
+import AppLinkHOC from './lesson-two';
 
 export {
-    Lesson
+    LessonOne,
+    AppLinkHOC
 };
