@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Lesson from './components/context';
+import { News } from './components/API/index';
 
-ReactDOM.render(<Lesson />, document.querySelector('#root'));
+ReactDOM.render(<News />, document.querySelector('#root'));
  
