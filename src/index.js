@@ -1,38 +1,11 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Menu from './components/menu/menu';
+import App from './components/redux/App';
+import store from './components/redux/store';
+import { Provider } from 'react-redux';
 
-
-import { News } from './components/API/index';
-import Reference from './components/reference';
-import Lesson from './components/context';
-
-export default class App extends Component {
-    render () {
-        const { children } = this.props;
-
-        return (
-            <Fragment>
-                <Menu/>
-                <main>
-                    { children }
-                </main>
-            </Fragment>
-        )
-    }
-}
-const Error = () => <h1>404 Error</h1>;
-
-ReactDOM.render(
-<BrowserRouter>
-    <App>
-        <Switch>
-            <Route exact path='/' component={ News } />
-            <Route exact path='/reference' component={ Reference } />
-            <Route exact path='/lesson' component={ Lesson } />
-            <Route path='/lesson/news' component={ News } />
-            <Route path='*' component={ Error } />
-        </Switch>
-    </App>
-</BrowserRouter>, document.querySelector('#root'));
+ReactDOM.render((
+    <Provider store={ store }>
+        <App />
+    </Provider>
+), document.querySelector('#root'));
